@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^6.2.1
-  shared_preferences: ^2.3.2
+  shared_preferences: ^2.5.2
   shimmer: ^3.0.0
 
 dev_dependencies:
