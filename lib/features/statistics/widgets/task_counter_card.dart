@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:simple_beautiful_checklist_exercise/shared/todo_provider.dart';
 
 class TaskCounterCard extends StatelessWidget {
-  final int taskCount;
-
-  const TaskCounterCard({super.key, required this.taskCount});
+  const TaskCounterCard({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class TaskCounterCard extends StatelessWidget {
                   shape: BoxShape.circle,
                 ),
                 child: Text(
-                  "$taskCount",
+                  "${context.watch<TodoProvider>().items.length}",
                   style: const TextStyle(
                     fontSize: 36,
                     color: Colors.white,
